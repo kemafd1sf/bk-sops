@@ -25,6 +25,7 @@ from gcloud.apigw.views.get_common_template_info import get_common_template_info
 from gcloud.apigw.views.get_common_template_list import get_common_template_list
 from gcloud.apigw.views.get_functionalization_task_list import get_functionalization_task_list
 from gcloud.apigw.views.get_mini_app_list import get_mini_app_list
+from gcloud.apigw.views.get_node_job_executed_log_for_inner import get_node_job_executed_log_for_inner
 from gcloud.apigw.views.get_periodic_task_info import get_periodic_task_info
 from gcloud.apigw.views.get_periodic_task_list import get_periodic_task_list
 from gcloud.apigw.views.get_plugin_detail import get_plugin_detail
@@ -143,4 +144,5 @@ urlpatterns = [
     url(r"^get_task_node_log/$", get_task_node_log),
     url(r"^get_task_plugin_log/$", get_task_plugin_log),
     url(r"^get_task_effective_time_for_inner/(?P<task_id>\d+)/(?P<bk_biz_id>\d+)/$", get_task_effective_time_for_inner),
+    url(r"^get_node_job_executed_log_for_inner/$", get_node_job_executed_log_for_inner),
 ]
