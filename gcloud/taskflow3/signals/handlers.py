@@ -99,7 +99,7 @@ def send_task_message(pipeline_id, node_id, msg_type):
         taskflow = TaskFlowInstance.objects.get(pipeline_instance__instance_id=pipeline_id)
 
         bk_biz_id = taskflow.project.bk_biz_id
-        task_id = taskflow.pipeline_instance.instance_id
+        task_id = taskflow.id
         receivers_list = taskflow.get_stakeholders()
         receivers = ",".join(receivers_list)
         executor = taskflow.pipeline_instance.executor
